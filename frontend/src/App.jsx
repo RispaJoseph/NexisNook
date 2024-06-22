@@ -3,6 +3,7 @@ import { BrowserRouter,Routes,Route } from 'react-router-dom'
 import LandingPage from './pages/LandingPage'
 import useStore from './Redux/useStore'
 import { Provider } from 'react-redux'
+import UserWrapper from './components/user/UserWrapper'
 
 
 // import reactLogo from './assets/react.svg'
@@ -16,6 +17,7 @@ function App() {
         <Provider store={useStore}>
           <Routes>
             <Route path='/' element= {<LandingPage/>}></Route>
+            <Route path='user/*' element={<UserWrapper/>}></Route>
           </Routes>
         </Provider>
         </BrowserRouter>
